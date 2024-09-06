@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f4f4f4, #ece9e6);
+    font-family: 'Poppins', sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #2b2d2f; /* Dark Charcoal */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #e0e0e0; /* Light Gray */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 10px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    border: 2px solid #333;
+    background-color: #beabb4; /* Dark Gray */
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 7px;
+    color: #ffffff; /* White */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.cell:hover {
+    background-color: #333333; /* Charcoal */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.cell.active-X {
+    color: #f39c12; /* Sunflower Yellow */
+    text-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+}
+
+.cell.active-O {
+    color: #1abc9c; /* Turquoise */
+    text-shadow: 0 0 10px #1abc9c, 0 0 20px #1abc9c;
+}
+
+#gameStatus {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light Gray */
+}
+
+#resetGame {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ffffff; /* White */
+    background-color: #2980b9; /* Blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#resetGame:hover {
+    background-color: #3498db; /* Light Blue */
+    transform: scale(1.05);
+}
